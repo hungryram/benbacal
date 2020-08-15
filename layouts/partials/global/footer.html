@@ -2,65 +2,77 @@
   <div class="section">
     <div class="container">
       <div class="columns is-variable is-8">
-        <div class="column">
-          <h1 class="title is-3">Whether it's buying or selling, we're ready to help</h1>
-          <div class="footer-form">
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-              <input name="bot-field" type="hidden"/>
-              <div class="field is-horizontal">
-                <div class="field-body">
-                  <div class="field">
-                    <p class="control is-expanded">
-                      <input class="input" type="text" placeholder="First Name" name="first name">
-                    </p>
-                  </div>
-                  <div class="field">
-                    <p class="control">
-                      <input class="input" type="text" placeholder="Last Name" name="last name">
-                    </p>
-                  </div>
-                </div>
+        <div class="column is-6">
+          <h1 class="title is-3 has-text-white">Contact</h1>
+          <div class="columns pt-6 has-text-white">
+            <div class="column pl-3">
+              <h6 class="title is-4 has-text-white">Email</h6>
+              <p>ben@revelrealestate.com</p>
+              <div class="pt-6">
+                <h2 class="title is-6 mb-0 has-text-white">DRE License Number</h2>
+                <p>01437782</p>
               </div>
-              
-              <div class="field">
-                <div class="control">
-                  <input class="input" type="text" placeholder="Phone" name="phone">
-                </div>
+            </div>
+            <div class="column">
+              <h6 class="title is-4 has-text-white">Mobile</h6>
+              <p> 310.717.5522</p>
+              <div class="pt-6">
+                <h2 class="title is-6 mb-0 has-text-white">Follow us</h2>
+                <p>01437782</p>
               </div>
-    
-              <div class="field">
-                <div class="control">
-                  <input class="input" type="email" placeholder="Email" name="email address">
-                </div>
-              </div>
-              <div class="field">
-                <div class="control">
-                  <textarea class="textarea" placeholder="Your Message" name="message"></textarea>
-                </div>
-              </div>
-              <div class="control">
-                <button class="button" style="{{ safeHTMLAttr (printf "background-color: %s" $.Site.Data.design.colors.button_background_colors) }}">Submit</button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="column">
-          <div class="footer-contact">
-            <h1 class="title is-3">Contact the Team</h1>
-            <p class="is-size-3">Information</p>
-            <p>310.717.5522</p>
-            <p>ben@revelrealestate.com</p>
-            <p>DRE# 01437782</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <hr>
+</footer>
+<footer class="bottom-foot">
   <div class="container">
     <div class="columns">
-      <div class="container">
-        <h4 class="title is-uppercase">REVEL REAL ESTATE</h4>
+      <div class="column is-4">
+        <h4 class="title is-4 has-text-white is-uppercase">REVEL REAL ESTATE</h4>
+        <p class="pb-6">Setting the standard for luxury real estate in Southern California since 2005</p>
+        <small>&copy; Copyright {{ dateFormat "2006" now }}, {{ .Site.Data.profile.company_name }}</small> &middot; <a href="https://hungryram.com" target="_blank">Website Developed by Hungry Ram</a>
+      </div>
+      <div class="column">
+        <h4 class="title is-6 has-text-white is-uppercase">Social</h4>
+        <ul>
+          <li><a href="">Facebook</a></li>
+          <li><a href="">Instagram</a></li>
+          <li><a href="">Twitter</a></li>
+          <li><a href="">Pinterest</a></li>
+          <li><a href="">Youtube</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4 class="title is-6 has-text-white is-uppercase">Links</h4>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Listings</a></li>
+          <li><a href="">Team</a></li>
+          <li><a href="">Sold</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input name="bot-field" type="hidden"/>
+          <input name="subject" type="hidden" value="Contact Form"/>
+          <div class="field">
+            <div class="control">
+              <input class="input" type="email" placeholder="Email" name="email address">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <textarea class="textarea" placeholder="Your Message" name="message"></textarea>
+            </div>
+          </div>
+          <div class="control">
+            <button class="button" style="{{ safeHTMLAttr (printf "background-color: %s" $.Site.Data.design.colors.button_background_colors) }}">Submit</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -69,6 +81,10 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
   <script src="{{.Site.BaseURL}}/js/main.js"></script>
+  <script>
+
+  </script>
 </body>
 </html>

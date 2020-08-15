@@ -1,60 +1,54 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <img src="/uploads/benlogo.jpg">
-      </a>
+<nav class="navbar is-transparent" role="navigation" aria-label="main navigation" style="border-bottom:2px solid rgba(35,31,32,.05);padding: 10px 0;">
+<div class="container">  
+<div class="navbar-brand">
   
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
+    <a class="navbar-item" href="{{ .Site.BaseURL }}">
+      <h1 class="title is-4">BEN BACAL</h1>
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+      {{ if .HasChildren }}
+          <div class="navbar-item has-dropdown is-hoverable main-drop">
+              <a class="navbar-link" href="javascript:;">
+                  {{ .Name }}
+              </a>
+              <!-- First Level Dropdown -->
+                  <div class="navbar-dropdown">
+                      {{ range .Children }}
+                          
+                          <a class="navbar-item {{ if .HasChildren }}navbar-link first-drop is-hoverable{{ end }}" href="{{ if .HasChildren }}javascript:;{{ else }}{{ .URL }}{{ end }}">
+                          {{ .Name }}
+                          </a>
+                      
+                      {{ end }}
+                </div>
+                <!-- End first level Dropdown -->
+          </div>
+          {{ else }} <!-- Else No Drop Down-->
+          <a href="{{ .URL }}" class="navbar-item">{{ .Name }}</a>
+      {{ end }}
+      {{ end }} <!-- End range menu -->
     </div>
-  
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item">
-          Home
-        </a>
-  
-        <a class="navbar-item">
-          Documentation
-        </a>
-  
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            More
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a href="/contact" class="button demo">
+            Contact
           </a>
-  
-          <div class="navbar-dropdown">
-            <a class="navbar-item">
-              About
-            </a>
-            <a class="navbar-item">
-              Jobs
-            </a>
-            <a class="navbar-item">
-              Contact
-            </a>
-            <hr class="navbar-divider">
-            <a class="navbar-item">
-              Report an issue
-            </a>
-          </div>
-        </div>
-      </div>
-  
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
-            </a>
-            <a class="button is-light">
-              Log in
-            </a>
-          </div>
         </div>
       </div>
     </div>
-  </nav>
+  </div>
+</div>
+</nav>
