@@ -1,67 +1,27 @@
-<div class="section">
-    <div class="container is-fluid">
-        <div class="columns has-text-centered pb-6 pt-6">
-            <div class="column">
-                <h5 class="subtitle is-5 is-uppercase">Our Listings</h5>
-                <h1 class="title is-2 pt-5">View Luxury Listings</h1>
-            </div>
-        </div>
-        <div class="columns is-multiline">
-            <div class="column is-3">
-                <div class="featured-team has-text-centered" style="background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.9)),url(/uploads/house.jpg) no-repeat center;background-size:cover;height:300px">
-                    <div class="featured-team-content">
-                        <h1 class="title is-6 has-text-white">9393 Sierra Mar Dr, Los Angeles, California 90069</h1>
-                        <p style="color: #ccc">Offered at$30,000/mo</p>
-                    </div>
+<div class="listing-overlay" style="background:linear-gradient(rgba(0,0,0,0),rgba(255,255,255,0.3)),url(/uploads/kitchenoverlay.jpg) no-repeat center;background-size:cover">
+    <div class="section">
+        <div class="container is-fluid">
+            <div class="columns has-text-centered pb-6 pt-6">
+                <div class="column">
+                    <h5 class="subtitle is-5 is-uppercase">Our Listings</h5>
+                    <h1 class="title is-2 pt-5">View Luxury Listings</h1>
                 </div>
             </div>
-            <div class="column is-3">
-                <div class="featured-team has-text-centered" style="background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.9)),url(/uploads/house.jpg) no-repeat center;background-size:cover;height:300px">
-                    <div class="featured-team-content">
-                        <h1 class="title is-6 has-text-white">9393 Sierra Mar Dr, Los Angeles, California 90069</h1>
-                        <p style="color: #ccc">Offered at$30,000/mo</p>
+            <div class="columns is-multiline">
+                {{ range (where $.Site.RegularPages "Type" "listings") }}
+                <div class="column is-3">
+                    <a href="{{ .Permalink }}">
+                    {{ range first 1 .Params.photos.gallery }}
+                    <div class="featured-team has-text-centered" style="background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.9)),url({{ . }}) no-repeat center;background-size:cover;height:300px">
+                    {{ end }}
+                        <div class="featured-team-content">
+                            <h1 class="title is-6 has-text-white">{{ .Title }} {{ .Params.city }}, {{ .Params.states }} {{ .Params.zip }}</h1>
+                            <p style="color: #ccc">{{ lang.NumFmt 0 .Params.weight }}</p>
+                        </div>
                     </div>
+                </a>
                 </div>
-            </div>
-            <div class="column is-3">
-                <div class="featured-team has-text-centered" style="background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.9)),url(/uploads/house.jpg) no-repeat center;background-size:cover;height:300px">
-                    <div class="featured-team-content">
-                        <h1 class="title is-6 has-text-white">9393 Sierra Mar Dr, Los Angeles, California 90069</h1>
-                        <p style="color: #ccc">Offered at$30,000/mo</p>
-                    </div>
-                </div>
-            </div>
-            <div class="column is-3">
-                <div class="featured-team has-text-centered" style="background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.9)),url(/uploads/house.jpg) no-repeat center;background-size:cover;height:300px">
-                    <div class="featured-team-content">
-                        <h1 class="title is-6 has-text-white">9393 Sierra Mar Dr, Los Angeles, California 90069</h1>
-                        <p style="color: #ccc">Offered at$30,000/mo</p>
-                    </div>
-                </div>
-            </div>
-            <div class="column is-3">
-                <div class="featured-team has-text-centered" style="background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.9)),url(/uploads/house.jpg) no-repeat center;background-size:cover;height:300px">
-                    <div class="featured-team-content">
-                        <h1 class="title is-6 has-text-white">9393 Sierra Mar Dr, Los Angeles, California 90069</h1>
-                        <p style="color: #ccc">Offered at$30,000/mo</p>
-                    </div>
-                </div>
-            </div>
-            <div class="column is-3">
-                <div class="featured-team has-text-centered" style="background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.9)),url(/uploads/house.jpg) no-repeat center;background-size:cover;height:300px">
-                    <div class="featured-team-content">
-                        <h1 class="title is-6 has-text-white">9393 Sierra Mar Dr, Los Angeles, California 90069</h1>
-                        <p style="color: #ccc">Offered at$30,000/mo</p>
-                    </div>
-                </div>
-            </div>
-            <div class="column is-3">
-                <div class="featured-team has-text-centered" style="background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.9)),url(/uploads/house.jpg) no-repeat center;background-size:cover;height:300px">
-                    <div class="featured-team-content">
-                        <h1 class="title is-6 has-text-white">9393 Sierra Mar Dr, Los Angeles, California 90069</h1>
-                        <p style="color: #ccc">Offered at$30,000/mo</p>
-                    </div>
-                </div>
+                {{ end }}
             </div>
         </div>
     </div>
