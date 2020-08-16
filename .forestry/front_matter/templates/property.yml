@@ -305,3 +305,5 @@ fields:
     template: seo
     label: SEO
   label: Search Engine Optimization
+pages:
+- content/listings/10350-wyton-dr.md
