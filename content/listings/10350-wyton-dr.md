@@ -28,6 +28,7 @@ file_attachments = []
 matterport_link = ""
 open_house_date = "No Open House Available"
 open_house_details = ""
-youtube_link = ""
+youtube_link = "F6h944ZKP6M"
 
 +++
+Sophistication and elegance define this groundbreaking compound set on 1.54 acres in the sought after neighborhood of Holmby Hills and just doors from the famous Playboy Mansion. The estate opens to a grand 2 story foyer with twin winding staircases, cathedral ceilings and glass atrium with floor to ceiling windows and a large skylight that allows natural light to flow throughout. The main residence, at 15,000 square feet, features a multitude of intimate spaces for lounging or entertaining including a chef’s kitchen with top of the line stainless steel appliances, two large islands & double ovens. The guest house, located just over the small lake that separates it from the main house, boasts an additional 3000 square feet with 3 bedrooms , 3 bathrooms putting the property at over 18,000 square feet of refined museum quality space for even the most discerning clientele. The estate is surrounded by beautiful grounds, a sparkling outdoor swimming pool, tennis court, and rolling lawns with many areas for large scale entertaining. From the hotel-esque high ceilings to the incredible outdoor amenities, this estate will exceed all expectations.
