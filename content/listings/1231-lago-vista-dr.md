@@ -6,7 +6,6 @@ status = "Active"
 title = "1231 Lago Vista Dr Beverly Hills, California 90210"
 type = ""
 weight = 32000000
-zip = 12345
 [details]
 bathrooms = "11"
 bedrooms = "7"
