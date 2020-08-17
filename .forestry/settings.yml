@@ -7,6 +7,10 @@ sections:
 - type: document
   path: data/profile.yaml
   label: My Profile
+- type: document
+  path: data/design.yaml
+  label: Design
+  match: "**/*"
 - type: directory
   path: content/team
   label: Team
