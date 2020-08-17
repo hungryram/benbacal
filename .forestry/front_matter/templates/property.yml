@@ -6,8 +6,14 @@ fields:
   type: text
   config:
     required: true
-  label: Property Address
-  description: Enter the address as the title
+  label: Title
+  description: Enter the full address as the title.<br><em>123 street address City,
+    State Zip</em>
+- name: address
+  type: text
+  config:
+    required: false
+  label: Address
 - name: city
   type: text
   config:
