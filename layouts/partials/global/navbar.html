@@ -1,20 +1,19 @@
-<nav class="navbar is-transparent" role="navigation" aria-label="main navigation" style="border-bottom:2px solid rgba(35,31,32,.05);padding: 10px 0;">
-<div class="container">  
-<div class="navbar-brand">
-  
-    <a class="navbar-item" href="{{ .Site.BaseURL }}">
-      <h1 class="title is-4">BEN BACAL</h1>
-    </a>
-
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
+ <!-- Hero head: will stick at the top -->
+ <div class="hero-head">
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <img src="/uploads/whitelogo.png" alt="Logo">
+        </a>
+        <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenuHeroA" class="navbar-menu">
+        <div class="navbar-end">
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
       {{ if .HasChildren }}
@@ -39,16 +38,7 @@
       {{ end }}
       {{ end }} <!-- End range menu -->
     </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a href="/contact" class="button demo">
-            Contact
-          </a>
-        </div>
-      </div>
-    </div>
   </div>
+    </div>
+  </nav>
 </div>
-</nav>
