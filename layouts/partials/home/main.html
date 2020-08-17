@@ -1,0 +1,35 @@
+<section class="hero is-fullheight hero__container">
+    <!-- Hero head: will stick at the top -->
+{{ partial "global/navbar.html" . }}
+<div class="hero-foot mb-5">
+    <div class="container">
+      <div class="columns has-text-left has-text-white">
+        <div class="column is-2">
+          <h4 class="title is-5 has-text-white">01</h4>
+          <p>Setting the standard for Luxury Real Estate</p>
+        </div>
+        <div class="column is-2">
+          <h4 class="title is-5 has-text-white">02</h4>
+          <p>Top-Producing Agent with over 2 billion sales</p>
+        </div>
+        <div class="column is-2">
+          <h4 class="title is-5 has-text-white">03</h4>
+          <p>Featured on New York Times</p>
+        </div>
+      </div>
+      </div>
+      </div>
+    <!-- Hero content: will be in the middle -->
+<div class="home-slide">
+{{ range .Site.Data.design.home_slideshow.slideshow }}
+    <div style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.7)),url({{ .image }});height:100vh;background-size:cover;background-position:center" class="lax" data-lax-bg-pos-y="0 0, vh 200 500">
+        <div class="hero-body slide-content">
+            <div class="container has-text-left">
+              <h3 class="subtitle is-5 is-uppercase pb-4">{{ .subtitle }}</h3>
+              <h1 class="title is-1 has-text-white">{{ .heading }}</h1>
+              {{ if .link }}<a href="{{ .link }}" class="hero-button">{{ .link_text }}</a>{{ end }}
+            </div>
+          </div>
+    </div>
+{{ end }}
+</div>

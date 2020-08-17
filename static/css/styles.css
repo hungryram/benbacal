@@ -61,7 +61,115 @@ textarea.textarea::placeholder {
     margin: 20px auto;
 }
 
+div.hero-body {
+    display: flex;
+    align-items: center;
+    height: inherit;
+}
+
+a.hero-button {
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    left: 100px;
+    color: #fff;
+    transition: width .3s ease;
+}
+
+a.hero-button:hover {
+    color: #C69C6D;
+    transition: width .3s ease;
+}
+
+a.hero-button:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    top: 12px;
+    height: 4px;
+    background: #fff;
+    left: -95px;
+    transition: width .2s ease;
+}
+
+a.hero-button:hover:before {
+    width: 80px;
+    transition: width .2s ease;
+}
+
+.home-slide.slick-initialized.slick-slider {
+    margin-top: -64px;
+}
+
+div.hero-foot {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    z-index: 100;
+    left: 0;
+}
+
+
+  /** Hero Text Animation **/
+  
+  @-webkit-keyframes fadeInUpSD {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(100px);
+      transform: translateY(100px);
+    }
+  
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  @keyframes fadeInUpSD {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(100px);
+      transform: translateY(100px);
+    }
+  
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  .fadeInUpSD {
+    -webkit-animation-name: fadeInUpSD;
+    animation-name: fadeInUpSD;
+  }
+  
+  .slick-active .slide-content {
+    animation-name: fadeInUpSD;
+    animation-duration: 1s;
+    opacity: 1;
+    width: 100%;
+  }
+  
+  /* Text Animation End **/
+  
+/* BANNER */
+
+.page-banner {
+    margin-top: -53px;
+}
+
 /* NAVBAR */
+
+nav.navbar {
+    background: transparent;
+}
+
+a.navbar-item img {
+    max-height: none;
+    width: 150px;
+}
 
 a.navbar-item,
 a.navbar-link {
