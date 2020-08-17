@@ -4,11 +4,11 @@ logo_and_title:
   site_title: Ben Bacal Real Estate
 home_slideshow:
   slideshow:
-  - heading: Revel Real Estate
-    image: "/uploads/v6bo73avkratptwld-90.jpg"
-    link_text: ''
-    link: ''
-    subtitle: Ben Bacal
+  - heading: Ben Bacal Real Estate
+    image: "/uploads/kitchen.jpg"
+    link_text: View Luxury Properties
+    link: "/listings"
+    subtitle: Welcome to
   - heading: Find commercial properties
     image: "/uploads/kny5aathxiwy8akkx-220.jpg"
     link_text: ''
