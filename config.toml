@@ -21,3 +21,9 @@ weight = 2
 name = "Home"
 url = "/"
 weight = 1
+[taxonomies]
+category = "categories"
+tag = "tags"
+status = "status"
+city = "city"
+zip = "zip"
