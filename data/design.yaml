@@ -1,0 +1,25 @@
+---
+logo_and_title:
+  logo: "/uploads/whitelogo.png"
+  site_title: Ben Bacal Real Estate
+home_slideshow:
+  slideshow:
+  - heading: Revel Real Estate
+    image: "/uploads/v6bo73avkratptwld-90.jpg"
+    link_text: ''
+    link: ''
+    subtitle: Ben Bacal
+  - heading: Find commercial properties
+    image: "/uploads/kny5aathxiwy8akkx-220.jpg"
+    link_text: ''
+    link: ''
+    subtitle: Modern Development
+  - subtitle: Luxury Estates
+    heading: Find your dream home
+    image: "/uploads/ddtzdbuzsxozt2hgc-160.jpg"
+    link_text: ''
+    link: ''
+banner:
+  image: ''
+footer:
+  footer_logo: ''

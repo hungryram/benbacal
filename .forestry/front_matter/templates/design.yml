@@ -75,3 +75,5 @@ fields:
       maxSize: 64
     label: Footer Logo
   label: Footer
+pages:
+- data/design.yaml
