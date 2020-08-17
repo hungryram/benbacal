@@ -2,7 +2,7 @@
 <div class="section">
     <div class="container">
         <div class="columns is-multiline">
-            {{ range .RegularPages }}
+            {{ range .Pages }}
             <div class="column is-3">
                 <a href="{{ .Permalink }}" class="listing-container">
                 {{ range first 1 .Params.photos.gallery }}
