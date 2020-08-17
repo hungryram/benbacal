@@ -1,9 +1,9 @@
 +++
-address = "10350 Wyton Dr"
+address = "1231 Lago Vista Dr"
 city = "Beverly Hills"
 states = "California"
 status = "Active"
-title = "10350 Wyton Dr, Los Angeles, California 90024"
+title = "1231 Lago Vista Dr Beverly Hills, California 90210"
 type = ""
 weight = 32000000
 zip = 90210
