@@ -2,8 +2,8 @@
 title = "David Ferrugio"
 weight = 50
 [contact]
-cell = ""
-email = ""
+cell = "310-600-3792"
+email = "Davidferrugio@gmail.com"
 phone = ""
 [details]
 agent_photo = "/uploads/1484942336013-dfcropped0.jpg"
