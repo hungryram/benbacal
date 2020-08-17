@@ -1,26 +1,47 @@
-<div class="bg-overlay">
-    <div class="section lax" data-lax-preset="eager-300">
-        <div class="container">
-            <div class="columns lax">
-                <div class="column">
-                    <h5 class="subtitle is-5 is-uppercase has-text-centered">Meet our team</h5>
-                    <h1 class="title is-1 pb-6 pt-5 has-text-centered has-text-white">Best in the business</h1>
-                </div>
-            </div>
-            <div class="responsive">
-                {{ range (where $.Site.RegularPages "Type" "team") }}
-                <div class="column">
-                    <div class="featured-team has-text-centered" style="background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.7)),url({{ .Params.details.agent_photo }}) no-repeat center;background-size:cover;height:500px">
-                        <div class="featured-team-content">
-                            <h1 class="title is-4 has-text-white">{{ .Title }}</h1>
-                            <p>{{ .Params.contact.cell }}</p>
-                            <p>{{ .Params.contact.email }}</p>
-                            <a href="{{ .Permalink }}">Read More</a>
-                        </div>
-                    </div>
-                </div>
+{{ $featured := .Site.Data.home.featured_section }}
+{{ $featuredFirst := .Site.Data.home.featured_section.first_featured }}
+{{ $featuredSecond := .Site.Data.home.featured_section.second_featured }}
+<div class="section" style="padding-top:10%;padding-bottom:10%">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                {{ if $featured.subtitle }}
+                    <h5 class="subtitle is-5 is-uppercase">{{ $featured.subtitle }}</h5>
+                {{ end }}
+                {{ if $featured.heading }}
+                    <h2 class="title is-2 pt-5">{{ $featured.heading }}</h2>
+                {{ end }}
+                {{ if $featured.body }}
+                <p class="mb-6">{{ $featured.body }}</p>
+                {{ end }}
+                {{ if $featured.link }}
+                <a href="{{ $featured.link }}" class="about-btn has-text-black">{{ $featured.link_text }}</a>
                 {{ end }}
             </div>
+            {{ if $featuredFirst }}
+                <div class="column">
+                    <a href="{{ $featuredFirst.link }}" class="featured-container">
+                        <div class="bg-image" style="background:url({{ $featuredFirst.image }}) no-repeat center;background-size:cover;height: 500px;">
+                            <div class="inner-box">
+                                <h4 class="subtitle is-6">{{ $featuredFirst.heading }}</h4>
+                                <h2 class="title is-5">{{ $featuredFirst.subtitle }}</h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {{ end }}
+            {{ if $featuredSecond }}
+                <div class="column">
+                    <a href="{{ $featuredSecond.link }}" class="featured-container">
+                        <div class="bg-image" style="background:url({{ $featuredSecond.image }}) no-repeat center;background-size:cover;height: 500px">
+                            <div class="inner-box">
+                                <h4 class="subtitle is-6">{{ $featuredSecond.heading }}</h4>
+                                <h2 class="title is-5">{{ $featuredSecond.subtitle }}</h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {{ end }}
         </div>
     </div>
 </div>

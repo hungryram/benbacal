@@ -97,7 +97,8 @@ a.hero-button:hover:before {
     transition: width .2s ease;
 }
 
-.home-slide.slick-initialized.slick-slider {
+.home-slide.slick-initialized.slick-slider,
+.listing-carousel.slick-initialized.slick-slider {
     margin-top: -64px;
 }
 
@@ -202,7 +203,8 @@ div.bg-overlay {
     /* margin-top: -100px; */
 }
 
-div.featured-team {
+div.featured-team,
+div.featured-listing {
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -210,21 +212,90 @@ div.featured-team {
     padding: 10%;
 }
 
-ul.slick-dots li button:before {
+.team-carousel ul.slick-dots li button:before {
     width: 50px;
     height: 5px;
     content: "";
     background: #C69C6D;
 }
 
+.team-carousel button.slick-prev:before {
+    content: "\f100";
+    font-size: 30px;
+    font-weight: 900;
+    color: #C69C6D;
+    transition: all .3s ease;
+    font-family: 'Font Awesome\ 5 Free';
+}
+
+.team-carousel button.slick-next:before {
+    content: "\f101";
+    font-size: 30px;
+    font-weight: 900;
+    color: #C69C6D;
+    transition: all .3s ease;
+    font-family: 'Font Awesome\ 5 Free';
+}
+
+.team-carousel ul.slick-dots {
+    bottom: -50px;
+}
+
+.team-carousel ul.slick-dots li {
+    margin: 0 20px;
+}
+
+.team-carousel ul.slick-dots li button:before {
+    transition: all .3s ease;
+}
+
+.team-carousel ul.slick-dots li button:hover:before {
+    transition: all .3s ease;
+}
+
 /* LISTING THUMBNAIL */
 
-div.featured-team {
+.featured-listing-content p {
+    color: #999;
+}
+
+.featured-listing-content a {
+    color: #C69C6D;
+    transition: all .3s ease;
+    font-style: italic;
+}
+
+a.listing-container,
+.featured-listing-content {    
+    transition: all .3s ease;
+}
+
+a.listing-container:hover .featured-listing-content {
+    padding-bottom: 10px;
+    transition: all .3s ease;
+    opacity: .6;
+}
+
+/* SINGLE LISTING */
+
+.listing-carousel button.slick-next {
+    right: 50px;
+    background: rgba(0,0,0,0.9);
+    padding: 30px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    height: 100%;
-    padding: 10%;
+}
+
+.listing-carousel button.slick-prev {
+    left: 50px;
+    color: white;
+    z-index: 1;
+    background: rgba(0,0,0,0.9);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* HOME ABOUT */
@@ -241,7 +312,8 @@ div.box-image {
 img.about-home-image {
     position: relative;
     z-index: 2;
-    padding: 50px 0;
+    margin: 50px 0;
+    box-shadow: -10px 19px 25px 0px #070707;
 }
 
 a.about-btn {
@@ -285,41 +357,11 @@ a.about-btn:hover:before {
     width: 100px;
 }
 
-button.slick-prev:before {
-    content: "\f100";
-    font-size: 30px;
-    font-weight: 900;
-    color: #C69C6D;
-    transition: all .3s ease;
-    font-family: 'Font Awesome\ 5 Free';
-}
+/* FEATURED */
 
-button.slick-next:before {
-    content: "\f101";
-    font-size: 30px;
-    font-weight: 900;
-    color: #C69C6D;
-    transition: all .3s ease;
-    font-family: 'Font Awesome\ 5 Free';
+div.bg-image {
+    position: relative;
 }
-
-ul.slick-dots {
-    bottom: -50px;
-}
-
-ul.slick-dots li {
-    margin: 0 20px;
-}
-
-ul.slick-dots li button:before {
-    transition: all .3s ease;
-}
-
-ul.slick-dots li button:hover:before {
-    transition: all .3s ease;
-}
-
-/* CLOSING */
 
 div.inner-box {
     background: white;
@@ -327,6 +369,13 @@ div.inner-box {
     position: absolute;
     bottom: 0;
     padding: 20px;
+    transition: all .3s ease;
+}
+
+a.featured-container:hover div.inner-box {
+    width: 350px;
+    padding-left: 40px;
+    transition: all .3s ease;
 }
 
 /* FOOTER */
@@ -339,7 +388,6 @@ footer.footer {
 
 footer.bottom-foot {
     background:#000;
-    padding: 5% 0;
 }
 
 footer.bottom-foot ul li a,

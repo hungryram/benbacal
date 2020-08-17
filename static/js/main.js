@@ -9,6 +9,14 @@ window.onload = function() {
   window.requestAnimationFrame(updateLax)
 }
 
+$('.listing-carousel').slick({
+  dots: false,
+  infinite: true,
+  speed: 800,
+  slidesToScroll: 1,
+  arrows: true,
+})
+
 $('.responsive').slick({
     dots: true,
     infinite: true,

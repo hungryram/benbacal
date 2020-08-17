@@ -1,0 +1,15 @@
+{{ partial "global/head.html" . }}
+
+<section class="hero is-fullheight hero__container">
+    <!-- Hero head: will stick at the top -->
+{{ partial "global/navbar.html" . }}
+    <!-- Hero content: will be in the middle -->
+<div class="listing-carousel">
+{{ range .Params.photos.gallery }}
+    <div style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.2)),url({{ . }});height:100vh;background-size:cover;background-position:center">
+    </div>
+{{ end }}
+</div>
+
+
+{{ partial "global/footer.html" . }}

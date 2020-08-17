@@ -16,7 +16,7 @@ agent_bio:
     masterminded deals for discerning buyers and sellers who require the utmost discretion. '
   link_text: Read more
 featured_listing:
-  subtitle: Featured Homes
+  subtitle: Exlusive Homes
   heading: Luxury Homes in Los Angeles
 featured_section:
   link: "/listings"
@@ -27,7 +27,7 @@ featured_section:
     subtitle: Beverly Hills Los Angeles
   second_featured:
     image: "/uploads/spatr9mifz9zribbi-10350wyton380.jpg"
-    heading: Sold
+    heading: Sold Properties
     subtitle: View Our Sold Listings
     link: "/status/sold"
   subtitle: Search by City
