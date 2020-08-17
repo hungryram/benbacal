@@ -1,12 +1,6 @@
 {{ define "main" }}
-<div class="section">
-    <div class="container">
-        <div class="columns">
-            <div class="column">
-                <h1 class="title is-3">{{ .Title }}</h1>
-                <a href="{{ .Permalink }}">Read more</a>
-            </div>
-        </div>
-    </div>
-</div>
+    {{ range .RegularPages }}
+        {{ .Title }}
+        <a href="{{ .Permalink }}">Read More</a>
+    {{ end }}
 {{ end }}

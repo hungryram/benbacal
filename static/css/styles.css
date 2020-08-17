@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 body p {
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 2;
@@ -139,6 +143,20 @@ a.about-btn {
     transition: width .2s ease;
 }
 
+.featured-team-content p {
+    color: #999;
+}
+
+.featured-team-content a {
+    color: #C69C6D;
+    transition: all .3s ease;
+    font-style: italic;
+}
+
+.featured-team-content a:hover {
+    transition: all .3s ease;
+}
+
 a.about-btn:before {
     content: "";
     position: absolute;
@@ -157,6 +175,40 @@ a.about-btn:hover {
 a.about-btn:hover:before {
     transition: width .2s ease;
     width: 100px;
+}
+
+button.slick-prev:before {
+    content: "\f100";
+    font-size: 30px;
+    font-weight: 900;
+    color: #C69C6D;
+    transition: all .3s ease;
+    font-family: 'Font Awesome\ 5 Free';
+}
+
+button.slick-next:before {
+    content: "\f101";
+    font-size: 30px;
+    font-weight: 900;
+    color: #C69C6D;
+    transition: all .3s ease;
+    font-family: 'Font Awesome\ 5 Free';
+}
+
+ul.slick-dots {
+    bottom: -50px;
+}
+
+ul.slick-dots li {
+    margin: 0 20px;
+}
+
+ul.slick-dots li button:before {
+    transition: all .3s ease;
+}
+
+ul.slick-dots li button:hover:before {
+    transition: all .3s ease;
 }
 
 /* CLOSING */

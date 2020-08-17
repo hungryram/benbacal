@@ -8,38 +8,18 @@
                 </div>
             </div>
             <div class="responsive">
+                {{ range (where $.Site.RegularPages "Type" "team") }}
                 <div class="column">
-                    <div class="featured-team has-text-centered" style="background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.7)),url(https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80) no-repeat center;background-size:cover;height:500px">
+                    <div class="featured-team has-text-centered" style="background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.7)),url({{ .Params.details.agent_photo }}) no-repeat center;background-size:cover;height:500px">
                         <div class="featured-team-content">
-                            <h1 class="title is-4 has-text-white">Sarah Conner</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequun</p>
+                            <h1 class="title is-4 has-text-white">{{ .Title }}</h1>
+                            <p>{{ .Params.contact.cell }}</p>
+                            <p>{{ .Params.contact.email }}</p>
+                            <a href="{{ .Permalink }}">Read More</a>
                         </div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="featured-team has-text-centered" style="background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.7)),url(https://images.unsplash.com/photo-1573166475912-1ed8b4f093d2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80) no-repeat center;background-size:cover;height:500px">
-                        <div class="featured-team-content">
-                            <h1 class="title is-4 has-text-white">Sarah Conner</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequun</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="featured-team has-text-centered" style="background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.7)),url(https://images.unsplash.com/photo-1558222218-b7b54eede3f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80) no-repeat center;background-size:cover;height:500px">
-                        <div class="featured-team-content">
-                            <h1 class="title is-4 has-text-white">Sarah Conner</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequun</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="featured-team has-text-centered" style="background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.7)),url(https://images.unsplash.com/photo-1559718062-361155fad299?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80) no-repeat center;background-size:cover;height:500px">
-                        <div class="featured-team-content">
-                            <h1 class="title is-4 has-text-white">Sarah Conner</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequun</p>
-                        </div>
-                    </div>
-                </div>
+                {{ end }}
             </div>
         </div>
     </div>
