@@ -4,6 +4,9 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: document
+  path: data/profile.yaml
+  label: My Profile
 - type: directory
   path: content/team
   label: Team
@@ -11,9 +14,6 @@ sections:
   match: "**/*"
   templates:
   - team
-- type: document
-  path: data/profile.yaml
-  label: My Profile
 - type: directory
   path: content/listings
   label: Listings
