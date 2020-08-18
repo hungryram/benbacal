@@ -58,5 +58,6 @@ fields:
   template: url
   label: URL
 pages:
+- content/blog/best-practice.md
 - content/blog/passion-work.md
 - content/blog/truly-creative.md
