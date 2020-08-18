@@ -1,11 +1,66 @@
 {{ define "main" }}
-
+{{ $agentContact := .Params.contact }}
+{{ $agentDetails := .Params.details }}
 <div class="section">
     <div class="container">
-        <div class="columns">
-            <div class="column content">
-                <h1 class="title is-3">{{ .Title }}</h1>
-                {{ .Content }}
+        <div class="columns is-variable is-8">
+            <div class="column is-4">
+                {{ if $agentDetails.agent_photo }}
+                <img src="{{ $agentDetails.agent_photo }}" alt="">
+                {{ end }}
+                <div class="agent-title-container mt-5">
+                    {{ if $agentDetails.title }}
+                    <div class="columns mt-2 mb-0">
+                        <div class="column">
+                            <h6 class="title is-6 has-text-white">{{ $agentDetails.title }}</h6>
+                        </div>
+                    </div>
+                    {{ end }}
+                    {{ if $agentDetails.license_type }}
+                    <div class="columns">
+                        <div class="column">
+                            <h6 class="title is-6 has-text-white">{{ $agentDetails.license_type }} {{ $agentDetails.license_number }}</h6>
+                        </div>
+                    </div>
+                    {{ end }}
+                    {{ if $agentContact.phone }}
+                    <div class="columns is-vcentered mb-0 is-mobile">
+                        <div class="column">
+                            <h6 class="subtitle is-6">Phone</h6>
+                        </div>
+                        <div class="column has-text-left">
+                            <a href="tel:{{ $agentContact.cell }}">{{ $agentContact.phone }}</a>
+                        </div>
+                    </div>
+                    {{ end }}
+                    {{ if $agentContact.cell }}
+                    <div class="columns is-vcentered mb-0 is-mobile">
+                        <div class="column">
+                            <h6 class="subtitle is-6">Cell</h6>
+                        </div>
+                        <div class="column has-text-left">
+                            <a href="tel:{{ $agentContact.cell }}">{{ $agentContact.cell }}</a>
+                        </div>
+                    </div>
+                    {{ end }}
+                    {{ if $agentContact.email }}
+                    <div class="columns is-vcentered mb-0 is-mobile">
+                        <div class="column">
+                            <h6 class="subtitle is-6">Email</h6>
+                        </div>
+                        <div class="column has-text-left">
+                            <a href="mailto:{{ $agentContact.email }}">{{ $agentContact.email }}</a>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="column bio-content">
+                <h3 class="subtitle is-6 is-uppercase">About</h3>
+                <h1 class="title is-1">{{ .Title }}</h1>
+                <div class="content">
+                    {{ .Content }}
+                </div>
             </div>
         </div>
     </div>

@@ -4,7 +4,7 @@
     <div class="container">
         <div class="columns is-variable is-8">
             <div class="column is-8">
-                {{ $paginator := .Paginate (where .Pages "Type" "blog") 4 }}
+                {{ $paginator := .Paginate (where .Pages "Type" "blog") 2 }}
                 {{ range $paginator.Pages }}
                 <div class="content">
                     <img src="{{ .Params.featured_image }}" alt="">
