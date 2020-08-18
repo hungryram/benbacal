@@ -484,6 +484,11 @@ div.listing-agent-container {
     color: #C69C6D;
 }
 
+.listing-team-content h1.title.is-5 span {
+    color: #C69C6D;
+    font-size: 1rem;
+}
+
 h1.title.more-prop {
     border-bottom: 1px solid #a9a9a9;
     padding-bottom: 20px;
@@ -571,6 +576,81 @@ a.featured-container:hover div.inner-box {
     width: 350px;
     padding-left: 40px;
     transition: all .3s ease;
+}
+
+/* BLOG */
+div.blog-date h1 {
+    color: #c7c7c7;
+}
+
+a.blog-btn {
+    transition: color .2s ease;
+    font-style: italic;
+    color: #C69C6D;
+}
+
+a.blog-btn:hover {
+    transition: color .2s ease;
+    color: #C69C6D;
+}
+
+div.blog-summary h6.subtitle.is-6 {
+    font-size: 14px;
+    font-weight: 100;
+}
+
+ul.blog-categories li {
+    margin-top: 10px;
+}
+
+ul.blog-categories li a {
+    color: #717171;
+    transition: padding .3s ease;
+}
+
+ul.blog-categories li a:hover {
+    padding-left: 4px;
+    transition: padding .3s ease;
+}
+
+article.media+.media {
+    border-top: none;
+}
+
+/* PAGINATION */
+
+.pagination li a {
+    transition: all .3s ease;
+    color: #C69C6D;
+}
+
+.pagination li:hover a {
+    background: #DCE0E0;
+    transition: all .3s ease;
+}
+
+ul.pagination {
+    justify-content: center;
+}
+
+li.page-item {
+    padding: 2px;
+    font-size: 14px;
+}
+
+.pagination-next,
+.pagination-previous {
+    background: white;
+    border-color: #fff!important;
+}
+
+li.active a {
+    background: #2e2e2e;
+    color: #ffffff;
+}
+
+.disabled {
+    display: none;
 }
 
 /* FOOTER */
