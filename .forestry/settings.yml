@@ -28,6 +28,13 @@ sections:
   templates:
   - property
 - type: directory
+  path: content/blog
+  label: Posts
+  create: documents
+  match: "**/*"
+  templates:
+  - blog
+- type: directory
   path: content
   label: Pages
   create: all
