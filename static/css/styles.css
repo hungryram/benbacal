@@ -1,6 +1,10 @@
 html {
     scroll-behavior: smooth;
-  }
+}
+
+div.section {
+    padding: 3rem 2rem;
+}
 
 body p {
     font-family: 'Noto Sans KR', sans-serif;
@@ -56,20 +60,26 @@ textarea.textarea::placeholder {
 
 /* HERO */
 
-.hero-foot > .container > .columns > .column::after {
+/* .hero-foot > .container > .columns > .column::after {
     content: "";
     width: 100px;
     position: absolute;
     height: 2px;
     background: white;
     margin: 20px auto;
+} */
+
+.hero-body.slide-content {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0;
 }
 
-div.hero-body {
+/* div.hero-body {
     display: flex;
     align-items: center;
     height: inherit;
-}
+} */
 
 a.hero-button {
     color: #fff;
@@ -101,19 +111,27 @@ a.hero-button:hover:before {
     transition: width .2s ease;
 }
 
-.home-slide.slick-initialized.slick-slider,
+/* .home-slide.slick-initialized.slick-slider,
 .listing-carousel.slick-initialized.slick-slider {
     margin-top: -64px;
-}
+} */
 
-div.hero-foot {
+/* div.hero-foot {
     position: absolute;
     right: 0;
     bottom: 10px;
     z-index: 100;
     left: 0;
+} */
+
+section.hero.slick-slide {
+    display: flex;
 }
 
+.hero-foot p {
+    color: #a9a9a9;
+    font-size: 13px;
+}
 
   /** Hero Text Animation **/
   
@@ -158,6 +176,8 @@ div.hero-foot {
   }
   
   /* Text Animation End **/
+
+
   
 /* BANNER */
 
@@ -166,6 +186,17 @@ div.hero-foot {
 }
 
 /* NAVBAR */
+
+div.hero-head {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+span.navbar-burger {
+    color: #fff;
+}
 
 nav.navbar {
     background: transparent;
@@ -202,7 +233,7 @@ a.navbar-link:not(.is-arrowless)::after {
 div.bg-overlay {
     background: url("/uploads/bg.jpg") no-repeat center;
     background-size: cover;
-    padding-top: 10%;
+    padding-top: 220px;
     /* padding: 10% 0; */
     /* margin-top: -100px; */
 }
@@ -255,6 +286,12 @@ div.featured-listing {
 
 .team-carousel ul.slick-dots li button:hover:before {
     transition: all .3s ease;
+}
+
+@media (max-width:768px){
+    div.team-carousel > ul.slick-dots {
+        display: none!important;
+    }
 }
 
 /* LISTING THUMBNAIL */
