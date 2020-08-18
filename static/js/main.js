@@ -15,6 +15,9 @@ $('.listing-carousel').slick({
   speed: 800,
   slidesToScroll: 1,
   arrows: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  pauseOnHover: false,
 })
 
 $('.responsive').slick({
@@ -131,3 +134,10 @@ $('.responsive').slick({
 			      ]
                   });
         });
+
+// LIGHTBOX
+$(document).ready(function(){
+  $('.listing-carousel').slickLightbox({
+    itemSelector: '.lightbox'
+  });
+});
