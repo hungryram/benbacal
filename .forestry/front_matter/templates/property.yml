@@ -169,6 +169,18 @@ fields:
     label: Listing Agent
     description: The agent assigned to this listing. Add agent under the "Teams and
       Office" tab
+  - name: co_list
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: pages
+        section: team
+        file: 
+        path: 
+    label: Co-Listing Agent
   label: Listing Agent
 - name: details
   type: field_group
