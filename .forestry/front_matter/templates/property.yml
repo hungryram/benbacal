@@ -82,15 +82,10 @@ fields:
       path: 
   label: State
 - name: zip
-  type: number
-  label: Zip Code
-  description: ''
-  default: 0
-  required: true
+  type: text
   config:
-    min: 
-    max: 
-    step: 
+    required: false
+  label: Zip
 - name: status
   type: select
   default: ''
