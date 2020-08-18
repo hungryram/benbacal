@@ -20,7 +20,7 @@ fields:
     options: []
     source:
       type: pages
-      section: teams
+      section: team
       file: 
       path: 
   label: Author
