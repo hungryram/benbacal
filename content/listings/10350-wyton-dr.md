@@ -6,7 +6,7 @@ status = "Active"
 title = "10350 Wyton Dr. Los Angeles, California 90024"
 type = ""
 weight = 49500000
-zip = 12345
+zip = "12344"
 [details]
 bathrooms = "12"
 bedrooms = "7"
