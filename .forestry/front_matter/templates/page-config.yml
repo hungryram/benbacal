@@ -78,3 +78,8 @@ fields:
     template: seo
     label: SEO
   label: Blog Page
+- name: enable_seo
+  type: boolean
+  label: Enable SEO Page Config
+  hidden: true
+  default: true
