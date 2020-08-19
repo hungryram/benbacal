@@ -2,6 +2,7 @@
 logo_and_title:
   logo: "/uploads/whitelogo.png"
   site_title: Ben Bacal Real Estate
+  favicon: "/uploads/benlogo.jpg"
 home_slideshow:
   slideshow:
   - heading: Ben Bacal Real Estate
