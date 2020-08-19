@@ -40,7 +40,7 @@ sections:
   create: all
   match: "*"
 - type: document
-  path: data/page-config.yaml
+  path: data/pageconfig.yaml
   label: Page Config
 upload_dir: static/uploads
 public_path: "/uploads"
