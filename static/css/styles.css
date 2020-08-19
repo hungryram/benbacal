@@ -1,5 +1,9 @@
 html {
     scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+    -o-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
 }
 
 div.section {
@@ -272,7 +276,6 @@ div a.navbar-item:hover {
         right: 0;
         top: 0;
         background: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0.9)),url("https://d3g7t4t7rv9de8.cloudfront.net/Jq9LtJH5MySLRHYv2-1895RisingGlen015.jpg?width=1798");
-        -webkit-transition: all 1s ease;
         background-size:cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -311,8 +314,8 @@ div.featured-listing {
 }
 
 .team-carousel button.slick-prev:before {
-    content: "\f100";
-    font-size: 30px;
+    content: "\00AB";
+    font-size: 40px;
     font-weight: 900;
     color: #C69C6D;
     transition: all .3s ease;
@@ -320,8 +323,8 @@ div.featured-listing {
 }
 
 .team-carousel button.slick-next:before {
-    content: "\f101";
-    font-size: 30px;
+    content: "\00BB";
+    font-size: 40px;
     font-weight: 900;
     color: #C69C6D;
     transition: all .3s ease;
