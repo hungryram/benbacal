@@ -16,6 +16,11 @@ fields:
     config:
       required: false
     label: Site Title
+  - name: favicon
+    type: file
+    config:
+      maxSize: 64
+    label: Favicon
   label: Logo and Title
 - name: home_slideshow
   type: field_group
