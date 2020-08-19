@@ -5,6 +5,10 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
+  path: data/page-seo.yaml
+  label: Page SEO
+  match: "**/*"
+- type: document
   path: data/profile.yaml
   label: My Profile
 - type: document
