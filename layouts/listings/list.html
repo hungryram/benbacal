@@ -1,6 +1,12 @@
 {{ define "main" }}
 <div class="section">
     <div class="container">
+        <div class="columns pb-6">
+            <div class="column is-half is-offset-one-quarter has-text-centered page-title">
+                <h1 class="title is-2">Our <span>Exclusive</span> Properties</h1>
+                <p>Discover esquisite real estate in the Los Angeles area.</p>
+            </div>
+        </div>
         <div class="columns is-multiline">
             {{ range .Pages }}
             <div class="column is-3">
@@ -10,7 +16,7 @@
                 {{ end }}
                     <div class="featured-listing-content">
                         <h1 class="title is-6 has-text-white">{{ .Title }}</h1>
-                        <p style="color: #ccc">{{ lang.NumFmt 0 .Params.weight }}</p>
+                        <p style="color: #C69C6D">${{ lang.NumFmt 0 .Params.weight }}</p>
                     </div>
                 </div>
             </a>

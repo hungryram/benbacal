@@ -12,7 +12,7 @@ main {
 }
 
 body p {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Raleway', sans-serif;
     line-height: 2;
     font-weight: 100;
 }
@@ -41,7 +41,7 @@ body h3.subtitle,
 body h4.subtitle,
 body h5.subtitle,
 body h6.subtitle {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: #C69C6D;
 }
 
@@ -223,15 +223,22 @@ a.navbar-item img {
 a.navbar-item,
 a.navbar-link {
     color: #fff;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 300;
+    transition: color .3s ease;
 }
 
 a.navbar-link:not(.is-arrowless)::after {
     border-color: white;
 }
 
-.navbar-menu {
+div a.navbar-item:hover {
+    background: none;
+    color: #C69C6D;
+    transition: color .3s ease;
+}
+
+/* .navbar-menu {
     animation: navAnimOpen .5s ease-in-out;
 }
 
@@ -239,6 +246,41 @@ a.navbar-link:not(.is-arrowless)::after {
   0% {display: none;opacity: 0;max-height: 0;}
   1% {display: block;opacity: 0;}
   100% {opacity: 1;max-height: 396px;}
+} */
+
+/* MOBILE NAV */
+
+@media (max-width: 1023px){
+    .navbar-end {
+        display: flex;
+        -ms-display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    .navbar-menu {
+        left: 20px;
+        -webkit-transition: all 1s ease;
+
+    }
+
+    .navbar-menu.is-active {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        background: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0.9)),url("https://d3g7t4t7rv9de8.cloudfront.net/Jq9LtJH5MySLRHYv2-1895RisingGlen015.jpg?width=1798");
+        -webkit-transition: all 1s ease;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .navbar-burger {
+        z-index: 10;
+    }
 }
 
 /* FEATURED TEAM */
@@ -254,6 +296,7 @@ div.bg-overlay {
 div.featured-team,
 div.featured-listing {
     display: flex;
+    -ms-display: flex;
     align-items: flex-end;
     justify-content: center;
     height: 100%;
@@ -685,6 +728,28 @@ li.active a {
 
 .disabled {
     display: none;
+}
+
+/* CONTACT PAGE */
+
+.contact-box {
+    background-color: rgb(0 0 0 / 80%);
+    padding: 20px;
+}
+
+form.contact-page input::placeholder,
+form.contact-page textarea.textarea::placeholder {
+    color: #ccc;
+}
+
+.contact-box a {
+    transition: color .3s ease;
+    color: #a9a9a9;
+}
+
+.contact-box a:hover {
+    color: #fff;
+    transition: color .3s ease;
 }
 
 /* FOOTER */
