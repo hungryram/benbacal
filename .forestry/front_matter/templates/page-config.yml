@@ -6,11 +6,6 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: heading
-    type: text
-    config:
-      required: false
-    label: Heading
   - name: body_text
     type: textarea
     default: ''
@@ -30,11 +25,6 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: heading
-    type: text
-    config:
-      required: false
-    label: Heading
   - name: body_text
     type: textarea
     default: ''
@@ -54,11 +44,6 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: heading
-    type: text
-    config:
-      required: false
-    label: Heading
   - name: body_text
     type: textarea
     default: ''
@@ -78,11 +63,6 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: heading
-    type: text
-    config:
-      required: false
-    label: Heading
   - name: body_text
     type: textarea
     default: ''
