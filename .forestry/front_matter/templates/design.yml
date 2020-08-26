@@ -76,6 +76,53 @@ fields:
       max: 
       labelField: 
     label: Slideshow
+  - name: footer_hero_text
+    type: field_group
+    config: {}
+    fields:
+    - name: column_one
+      type: field_group
+      config: {}
+      fields:
+      - name: heading
+        type: text
+        config:
+          required: false
+          max: 20
+        label: Heading
+      - name: body
+        type: textarea
+        default: ''
+        config:
+          required: false
+          wysiwyg: false
+          schema:
+            format: markdown
+          max: 60
+        label: Body
+      label: Column One
+    - name: column_two
+      type: field_group
+      config: {}
+      fields:
+      - name: heading
+        type: text
+        config:
+          required: false
+          max: 20
+        label: Heading
+      - name: body
+        type: textarea
+        default: ''
+        config:
+          required: false
+          wysiwyg: false
+          schema:
+            format: markdown
+          max: 50
+        label: Body
+      label: Column Two
+    label: Footer Hero Text
   label: Home Slideshow
 - name: banner
   type: field_group
