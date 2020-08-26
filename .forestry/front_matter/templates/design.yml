@@ -9,7 +9,7 @@ fields:
   - name: logo
     type: file
     config:
-      maxSize: 64
+      maxSize: 2
     label: Logo
   - name: site_title
     type: text
@@ -19,7 +19,7 @@ fields:
   - name: favicon
     type: file
     config:
-      maxSize: 64
+      maxSize: 1
     label: Favicon
   label: Logo and Title
 - name: colors
@@ -59,7 +59,7 @@ fields:
     - name: image
       type: file
       config:
-        maxSize: 64
+        maxSize: 2
       label: Image
     - name: link_text
       type: text
@@ -84,9 +84,14 @@ fields:
   - name: image
     type: file
     config:
-      maxSize: 64
-    label: Image
-  label: Banner
+      maxSize: 2
+    label: Sub Page Image
+  - name: contact_page_image
+    type: file
+    config:
+      maxSize: 2
+    label: Contact Page Image
+  label: Page Banner
 - name: footer
   type: field_group
   config: {}
@@ -94,7 +99,7 @@ fields:
   - name: footer_logo
     type: file
     config:
-      maxSize: 64
+      maxSize: 2
     label: Footer Logo
   - name: footer_bio
     type: textarea
