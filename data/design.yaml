@@ -27,6 +27,7 @@ footer:
   footer_logo: "/uploads/revelrealestatelogo-white.png"
   footer_bio: Setting the standard for luxury real estate in Southern California since
     2005.
+  background_image: "/uploads/footer.jpg"
 colors:
   primary_color: "#B70000"
   button_background_color: "#F5A623"
