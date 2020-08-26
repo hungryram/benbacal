@@ -573,6 +573,10 @@ div.agent-title-container a {
     color: #909090;
 }
 
+div.agent-social ul li a {
+    color: #C69C6D;
+}
+
 /* HOME ABOUT */
 
 div.box-image {

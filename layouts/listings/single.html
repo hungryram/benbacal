@@ -21,7 +21,7 @@
     <div class="container pt-6">
         <div class="columns pt-6">
             <div class="column is-half is-offset-one-quarter has-text-centered">
-                <h4 class="title is-4 single-price">${{  lang.NumFmt 0 .Params.weight }}</h4>
+                <h4 class="title is-4 single-price primary-color">${{  lang.NumFmt 0 .Params.weight }}</h4>
                 <h1 class="title is-3 has-text-centered">{{ .Title }}</h1>
             </div>
         </div>
@@ -105,10 +105,10 @@
                     <div class="listing-agent-container">
                         <img src="{{ .Params.details.agent_photo }}" alt="">
                         <div class="listing-team-content">
-                            <h1 class="title is-5 has-text-black mb-2">{{ .Title }} <br><span>Listing Agent</span></h1>
+                            <h1 class="title is-5 has-text-black mb-2">{{ .Title }} <br><span class="primary-color">Listing Agent</span></h1>
                             <p><a href="tel:{{ .Params.contact.cell }}">{{ .Params.contact.cell }}</a></p>
                             <p><a href="mailto:{{ .Params.contact.email }}">{{ .Params.contact.email }}</a></p>
-                            <a href="{{ .Permalink }}" class="readmore">Read More</a>
+                            <a href="{{ .Permalink }}" class="readmore primary-color">Read More</a>
                         </div>
                     </div>
                 {{ end }}
@@ -120,10 +120,10 @@
                             <div class="listing-agent-container">
                                 <img src="{{ .Params.details.agent_photo }}" alt="">
                                 <div class="listing-team-content">
-                                    <h1 class="title is-5 has-text-black mb-2">{{ .Title }} <br><span>Co-listing Agent</span></h1>
+                                    <h1 class="title is-5 has-text-black mb-2">{{ .Title }} <br><span class="primary-color">Co-listing Agent</span></h1>
                                     <p><a href="tel:{{ .Params.contact.cell }}">{{ .Params.contact.cell }}</a></p>
                                     <p><a href="mailto:{{ .Params.contact.email }}">{{ .Params.contact.email }}</a></p>
-                                    <a href="{{ .Permalink }}" class="readmore">Read More</a>
+                                    <a href="{{ .Permalink }}" class="readmore primary-color">Read More</a>
                                 </div>
                             </div>
                         {{ end }}
@@ -136,7 +136,7 @@
     <div class="container">
         <div class="columns pb-6">
             <div class="column">
-                <h1 class="title is-3 more-prop">More Exclusive <span>Properties</span></h1>
+                <h1 class="title is-3 more-prop">More Exclusive <span class="primary-color">Properties</span></h1>
             </div>
         </div>
         <div class="columns">
@@ -148,7 +148,7 @@
                 {{ end }}
                     <div class="featured-listing-content">
                         <h1 class="title is-6 has-text-white">{{ .Title }}</h1>
-                        <p style="color: #ccc">{{ lang.NumFmt 0 .Params.weight }}</p>
+                        <p class="primary-color">${{ lang.NumFmt 0 .Params.weight }}</p>
                     </div>
                 </div>
             </a>

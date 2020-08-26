@@ -68,9 +68,52 @@
                     </div>
                     {{ end }}
                 </div>
+                <div class="agent-social mt-6">
+                    <ul>
+                        {{ with .Params.social_media.facebook }}
+                        <li><a href="{{ . }}" target="_blank" title="Facebook" class="primary-color">Facebook</a></li>
+                        {{end}}
+
+                        {{ with .Params.social_media.instagram }}
+                        <li><a href="{{ . }}" target="_blank" title="Instagram" class="primary-color">Instagram</a></li>
+                        {{end}}
+
+                        {{ with .Params.social_media.linkedin }}
+                        <li><a href="{{ . }}" target="_blank" title="Linkedin" class="primary-color">Linkedin</a></li>
+                        {{end}}
+
+                        {{ with .Params.social_media.pinterest }}
+                        <li><a href="{{ . }}" target="_blank" title="Pinterest" class="primary-color">Pinterest</a></li>
+                        {{end}}
+
+                        {{ with .Params.social_media.twitter }}
+                        <li><a href="{{ . }}" target="_blank" title="Twitter" class="primary-color">Twitter</a></li>
+                        {{end}}
+
+                        {{ with .Params.social_media.youtube }}
+                        <li><a href="{{ . }}" target="_blank" title="Youtube" class="primary-color">Youtube</a></li>
+                        {{end}}
+
+                        {{ with .Params.social_media.realtor }}
+                        <li><a href="{{ . }}" target="_blank" title="Realtor" class="primary-color">Realtor</a></li>
+                        {{end}}
+
+                        {{ with .Params.social_media.reddit }}
+                        <li><a href="{{ . }}" target="_blank" title="Reddit" class="primary-color">Reddit</a></li>
+                        {{end}}
+
+                        {{ with .Params.social_media.redfin }}
+                        <li><a href="{{ . }}" target="_blank" title="Redfin" class="primary-color">Redfin</a></li>
+                        {{end}}
+
+                        {{ with .Params.social_media.trulia }}
+                        <li><a href="{{ . }}" target="_blank" title="Trulia" class="primary-color">Trulia</a></li>
+                        {{end}}
+                      </ul>
+                </div>
             </div>
             <div class="column bio-content">
-                <h3 class="subtitle is-6 is-uppercase">About</h3>
+                <h3 class="subtitle is-6 is-uppercase primary-color">About</h3>
                 <h1 class="title is-1">{{ .Title }}</h1>
                 <div class="content">
                     {{ .Content }}

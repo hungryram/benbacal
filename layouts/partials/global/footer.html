@@ -82,7 +82,7 @@
             </div>
           </div>
           <div class="control">
-            <button class="button">Submit</button>
+            <button class="button primary-btn">Submit</button>
           </div>
         </form>
       </div>
@@ -108,5 +108,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
   <script src="{{.Site.BaseURL}}/js/main.js"></script>
+  <script>
+          // COLORS
+          // SECONDARY BUTTON
+          document.querySelectorAll(".primary-color").forEach(function(el) {
+            el.style.color = '{{ .Site.Data.design.colors.primary_color }}';
+          });
+          // PRIMARY BUTTON
+          document.querySelectorAll(".primary-btn").forEach(function(bg) {
+            bg.style.backgroundColor = '{{ .Site.Data.design.colors.button_background_color }}';
+          });
+  </script>
 </body>
 </html>

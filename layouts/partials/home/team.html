@@ -5,7 +5,7 @@
             <div class="columns lax">
                 <div class="column is-half is-offset-one-quarter">
                     {{ if $teamTitle.subtitle }}
-                        <h5 class="subtitle is-5 is-uppercase has-text-centered">{{ $teamTitle.subtitle }}</h5>
+                        <h5 class="subtitle is-5 is-uppercase has-text-centered primary-color">{{ $teamTitle.subtitle }}</h5>
                     {{ end }}
                     {{ if $teamTitle.heading }}
                     <h1 class="title is-1 pb-6 pt-5 has-text-centered has-text-white">{{ $teamTitle.heading }}</h1>
@@ -20,7 +20,7 @@
                             <h1 class="title is-4 has-text-white">{{ .Title }}</h1>
                             <p>{{ .Params.contact.cell }}</p>
                             <p>{{ .Params.contact.email }}</p>
-                            <a href="{{ .Permalink }}">Read More</a>
+                            <a href="{{ .Permalink }}" class="primary-color">Read More</a>
                         </div>
                     </div>
                 </div>

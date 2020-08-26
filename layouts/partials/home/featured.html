@@ -6,7 +6,7 @@
         <div class="columns">
             <div class="column">
                 {{ if $featured.subtitle }}
-                    <h5 class="subtitle is-5 is-uppercase">{{ $featured.subtitle }}</h5>
+                    <h5 class="subtitle is-5 is-uppercase primary-color">{{ $featured.subtitle }}</h5>
                 {{ end }}
                 {{ if $featured.heading }}
                     <h2 class="title is-2 pt-5">{{ $featured.heading }}</h2>
@@ -23,7 +23,7 @@
                     <a href="{{ $featuredFirst.link }}" class="featured-container">
                         <div class="bg-image" style="background:url({{ $featuredFirst.image }}) no-repeat center;background-size:cover;height: 500px;">
                             <div class="inner-box">
-                                <h4 class="subtitle is-6">{{ $featuredFirst.heading }}</h4>
+                                <h4 class="subtitle is-6 primary-color">{{ $featuredFirst.heading }}</h4>
                                 <h2 class="title is-5">{{ $featuredFirst.subtitle }}</h2>
                             </div>
                         </div>
@@ -35,7 +35,7 @@
                     <a href="{{ $featuredSecond.link }}" class="featured-container">
                         <div class="bg-image" style="background:url({{ $featuredSecond.image }}) no-repeat center;background-size:cover;height: 500px">
                             <div class="inner-box">
-                                <h4 class="subtitle is-6">{{ $featuredSecond.heading }}</h4>
+                                <h4 class="subtitle is-6 primary-color">{{ $featuredSecond.heading }}</h4>
                                 <h2 class="title is-5">{{ $featuredSecond.subtitle }}</h2>
                             </div>
                         </div>
