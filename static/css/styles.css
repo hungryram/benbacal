@@ -762,8 +762,6 @@ form.contact-page textarea.textarea::placeholder {
 /* FOOTER */
 
 footer.footer {
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,9)),
-    url("https://d3g7t4t7rv9de8.cloudfront.net/9RAZAjyizZidH4oSH-SMcam5HQ030617R2.jpg?width=1840") no-repeat center 10%;
     background-size: cover;
 }
 

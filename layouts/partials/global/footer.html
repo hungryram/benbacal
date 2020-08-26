@@ -1,7 +1,7 @@
 {{ $footerContact := .Site.Data.profile.primary_contact }}
 {{ $footerDesign := .Site.Data.design.footer }}
 {{ $footerSocial := .Site.Data.profile.social_accounts }}
-<footer class="footer">
+<footer class="footer" style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,9)),url({{ .Site.Data.design.footer.background_image }});">
   <div class="section">
     <div class="container">
       <div class="columns is-variable is-8">
@@ -93,9 +93,9 @@
       </div>
       <div class="column has-text-centered-mobile">
         <ul>
-          <li class="is-inline-block mr-4"><a href="">Privacy Policy</a></li>
-          <li class="is-inline-block mr-4"><a href="">Accessibility</a></li>
-          <li class="is-inline-block mr-4"><a href="">Privacy Policy</a></li>
+          {{ if in .Permalink "accessibility" }}<li class="is-inline-block mr-4"><a href="">Accessibility</a></li>{{ end }}
+          {{ if in .Permalink "terms" }}<li class="is-inline-block mr-4"><a href="">Terms and Condition</a></li>{{ end }}
+          {{ if in .Permalink "privacy" }}<li class="is-inline-block mr-4"><a href="/privacy-policy">Privacy Policy</a></li>{{ end }}
         </ul>
       </div>
     </div>

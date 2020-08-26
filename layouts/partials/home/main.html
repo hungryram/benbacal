@@ -15,18 +15,19 @@
       {{ if .link }}<a href="{{ .link }}" class="hero-button">{{ .link_text }}</a>{{ end }}
     </div>
   </div>
-
+{{ $columnOne := $.Site.Data.design.home_slideshow.footer_hero_text.column_one }}
+{{ $columnTwo := $.Site.Data.design.home_slideshow.footer_hero_text.column_two }}
   <!-- Hero footer: will stick at the bottom -->
   <div class="section hero-foot">
     <div class="container">
       <div class="columns has-text-left has-text-white is-mobile">
         <div class="column is-2-desktop">
-          <h4 class="title is-5 has-text-white">01</h4>
-          <p>Setting the standard for Luxury Real Estate</p>
+          <h4 class="title is-5 has-text-white">{{ $columnOne.heading }}</h4>
+          <p>{{ $columnOne.body }}</p>
         </div>
         <div class="column is-2-desktop">
-          <h4 class="title is-5 has-text-white">02</h4>
-          <p>Top-Producing Agent with over 2 billion sales</p>
+          <h4 class="title is-5 has-text-white">{{ $columnTwo.heading }}</h4>
+          <p>{{ $columnTwo.body }}</p>
         </div>
       </div>
       </div>

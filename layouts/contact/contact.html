@@ -1,6 +1,6 @@
 {{ partial "global/head.html" . }}
 {{ $contact := .Site.Data.profile.primary_contact }}
-<section class="hero is-fullheight lax" style="background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(/uploads/cvvrmnxshtxzebhus-310.jpg);height:100vh;background-size:cover;background-position:center;" data-lax-bg-pos-y="0 0, vh 200 500">
+<section class="hero is-fullheight lax" style="background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url({{ .Site.Data.design.banner.contact_page_image }});height:100vh;background-size:cover;background-position:center;" data-lax-bg-pos-y="0 0, vh 200 500">
 {{ partial "global/navbar.html" . }}
     <!-- Hero content: will be in the middle -->
     <div class="hero-body">
