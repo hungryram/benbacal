@@ -32,12 +32,6 @@ fields:
       required: false
       color_format: Hex
     label: Primary Color
-  - name: secondary_color
-    type: color
-    label: Secondary Color
-    config:
-      required: false
-      color_format: Hex
   label: Colors
 - name: home_slideshow
   type: field_group
