@@ -32,6 +32,12 @@ fields:
       required: false
       color_format: Hex
     label: Primary Color
+  - name: button_background_color
+    type: color
+    label: Button Background Color
+    config:
+      required: false
+      color_format: Hex
   label: Colors
 - name: home_slideshow
   type: field_group
