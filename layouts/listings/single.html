@@ -31,7 +31,7 @@
 <div class="section">
     <div class="container">
         <div class="columns">
-            <div class="column is-4 listing-detail-container pl-6 pr-6 mr-6 listing-detail">
+            <div class="column is-4 listing-detail-container pl-6 pr-6 listing-detail">
                 <div class="detail-title"><h3 class="title is-5 is-capitalized">Details</h3></div>
 
                     {{ if $propDetails.bedrooms }}
@@ -45,6 +45,12 @@
                             <div class="column"><h6 class="title is-6 has-text-white">Baths</h6></div>
                             <div class="column"><span>{{ $propDetails.bathrooms }}</span></div>
                         </div>
+                    {{ end }}
+                    {{ if index .Params "property-types" }}
+                    <div class="columns is-mobile">
+                        <div class="column"><h6 class="title is-6 has-text-white">Property Type</h6></div>
+                        <div class="column"><span>{{ index .Params "property-types" }}</span></div>
+                    </div>
                     {{ end }}
                     {{ if $propDetails.square_footage }}
                         <div class="columns is-mobile">
@@ -83,7 +89,14 @@
                     <div class="column"><span>{{ $propDetails.year_built }}</span></div>
                 </div>
                 {{ end }}
+                {{ range .Params.tools.file_attachments }}
+                <div class="columns is-mobile">
+                    <div class="column"><h6 class="title is-6 has-text-white">Attachments</h6></div>
+                    <div class="column"><span><a href="{{ . }}" class="primary-color" target="_blank">Download</a></span></div>
                 </div>
+                {{ end }}
+                </div>
+                <div class="column is-1"></div>
                 <div class="column">
                     <div class="content single-content">
                         {{ .Content }}
@@ -93,10 +106,18 @@
         </div>
     </div>
     <div class="section">
-        <div class="container is-fluid">
-            {{ if .Params.tools.youtube_link }}
-              <iframe src="https://www.youtube.com/embed/{{ .Params.tools.youtube_link }}" style="height:100vh;width:100%" frameborder="0" scrolling="no" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-            {{end}}
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    {{ if .Params.tools.youtube_link }}
+                    <iframe src="https://www.youtube.com/embed/{{ .Params.tools.youtube_link }}" style="height:80vh;width:100%" frameborder="0" scrolling="no" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                  {{end}}
+                  {{ if .Params.tools.matterport_link }}
+                        <h2 class="title is-6">Virtual Tour</h2>
+                        <iframe src="{{ .Params.tools.matterport_link }}" frameborder="0" allowfullscreen allow="vr" style="height:80vh;width:100%"></iframe>
+                {{end}}
+                </div>
+            </div>
         </div>
     </div>
     <div class="section listing-contact">
