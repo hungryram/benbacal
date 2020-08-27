@@ -59,17 +59,29 @@
                     </div>
                 {{ end }}
 
-                    {{ if $propDetails.status }}
+                    {{ if .Params.status }}
                     <div class="columns is-mobile">
-                        <div class="column"><h6 class="title is-6 has-text-white">Sq. Ft</h6></div>
-                        <div class="column"><span>{{ $propDetails.status }}</span></div>
+                        <div class="column"><h6 class="title is-6 has-text-white">Status</h6></div>
+                        <div class="column"><span>{{ .Params.status }}</span></div>
                     </div>
                 {{ end }}
                 {{ if $propDetails.mls_number }}
                     <div class="columns is-mobile">
-                        <div class="column"><h6 class="title is-6 has-text-white">Sq. Ft</h6></div>
+                        <div class="column"><h6 class="title is-6 has-text-white">MLS number</h6></div>
                         <div class="column"><span>{{ $propDetails.mls_number }}</span></div>
                     </div>
+                {{ end }}
+                {{ if $propDetails.hoa }}
+                <div class="columns is-mobile">
+                    <div class="column"><h6 class="title is-6 has-text-white">HOA</h6></div>
+                    <div class="column"><span>{{ $propDetails.hoa }}</span></div>
+                </div>
+                {{ end }}
+                {{ if $propDetails.year_built }}
+                <div class="columns is-mobile">
+                    <div class="column"><h6 class="title is-6 has-text-white">Year Built</h6></div>
+                    <div class="column"><span>{{ $propDetails.year_built }}</span></div>
+                </div>
                 {{ end }}
                 </div>
                 <div class="column">

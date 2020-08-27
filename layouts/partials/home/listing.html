@@ -21,13 +21,15 @@
                     {{ end }}
                         <div class="featured-listing-content">
                             <h1 class="title is-6 has-text-white">{{ .Title }}</h1>
-                            <p style="color: #C69C6D">${{ lang.NumFmt 0 .Params.weight }}</p>
+                            <p class="primary-color">${{ lang.NumFmt 0 .Params.weight }}</p>
                         </div>
                     </div>
                 </a>
                 </div>
                 {{ else }}
-                <h2 class="title is-4 has-text-centered">No listings just yet</h2>
+                <div class="column has-text-centered">
+                    <h2 class="title is-4 has-text-centered">No listings just yet</h2>
+                </div>
                 {{ end }}
             </div>
         </div>

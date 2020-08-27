@@ -4,7 +4,7 @@ city = "Beverly Hills"
 states = "California"
 status = "Active"
 title = "1231 Lago Vista Dr Beverly Hills, California 90210"
-type = "Single Family"
+type = ""
 weight = 32000000
 zip = "12345"
 [details]

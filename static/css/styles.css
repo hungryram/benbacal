@@ -454,7 +454,7 @@ a.listing-container:hover .featured-listing-content {
 div.listing-detail-container {
     background: #2e2e2e;
     color: #fff;
-    height: 350px;
+    height: auto;
 }
 
 div.listing-detail-container .columns:not(:last-child) {

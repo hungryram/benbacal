@@ -1,6 +1,5 @@
 baseURL = "https://benbacal.netlify.app/"
 languageCode = "en-us"
-title = "My New Hugo Site"
 summaryLength = 30
 [[menu.main]]
 name = "Contact"
@@ -28,3 +27,4 @@ tag = "tags"
 status = "status"
 city = "city"
 zip = "zip"
+property-type = "property-types"
