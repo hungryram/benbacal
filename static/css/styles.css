@@ -759,6 +759,55 @@ form.contact-page textarea.textarea::placeholder {
     transition: color .3s ease;
 }
 
+/* FILTER NAV */
+
+.filter-drawer {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+  
+.filter-drawer ul li a {
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    padding-left: 20px;
+    color: #a9a9a9;
+    font-size: 13px;
+}
+
+.filter-drawer ul li a:hover {
+    padding-left: 25px;
+    transition: 0.3s;
+}
+
+.filter-drawer h2.subtitle {
+    color: #fff;
+    transition: 0.3s;
+    padding-left: 20px;
+    padding-top: 40px;
+    font-size: 14px;
+}
+
+  body {
+    transition: 0.5s;
+}
+
+.filter-drawer .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
 /* FOOTER */
 
 footer.footer {

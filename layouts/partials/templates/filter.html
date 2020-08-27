@@ -1,0 +1,43 @@
+<div id="filter-menu" class="filter-drawer">
+    <a href="javascript:void(0)" class="closebtn primary-color" onclick="closeNav()">&times;</a>
+        <h2 class="subtitle is-6 mb-2">Filter by State</h2>
+        <ul>
+            {{ range $name, $taxonomy := .Site.Taxonomies.states }}
+        <li>
+            <a href="/states{{ $name | urlize | relURL }}">{{ $name | humanize }}</a>
+        </li>
+        {{end}}
+        </ul>
+        <h2 class="subtitle is-6">Filter by City</h2>
+        <ul>
+        {{- range $city, $taxonomy := .Site.Taxonomies.city -}}
+            <li>
+                <a href="/city{{ $city | urlize | relURL }}">{{ $city | humanize }}</a>
+            </li>
+        {{- end -}}
+        </ul>
+        <h2 class="subtitle is-6">Filter by Zip Code</h2>
+        <ul>
+        {{- range $zip, $taxonomy := .Site.Taxonomies.zip -}}
+            <li>
+                <a href="/zip{{ $zip | urlize | relURL }}">{{ $zip }}</a>
+            </li>
+        {{- end -}}
+        </ul>
+        <h2 class="subtitle is-6">Filter by Property Type</h2>
+        <ul>
+        {{- range $type, $taxonomy := index .Site.Taxonomies "property-types" -}}
+            <li>
+                <a href="/property-types{{ $type | urlize | relURL }}">{{ $type | humanize }}</a>
+            </li>
+        {{- end -}}
+        </ul>
+        <h2 class="subtitle is-6">Filter by Property Status</h2>
+        <ul>
+        {{- range $status, $taxonomy := .Site.Taxonomies.status -}}
+            <li>
+                <a href="/status{{ $status | urlize | relURL }}">{{ $status | humanize }}</a>
+            </li>
+        {{- end -}}
+        </ul>
+</div>
