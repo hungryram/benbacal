@@ -248,14 +248,6 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: main_photo
-    type: file
-    config:
-      maxSize: 5
-    label: Main Photo
-    default: "/uploads/main-house-photo.jpg"
-    description: Photos that are larger in size will take time to upload. We recommend
-      using optimized photos.
   - name: gallery
     type: image_gallery
     config: {}
