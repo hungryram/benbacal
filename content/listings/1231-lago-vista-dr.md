@@ -1,6 +1,7 @@
 +++
 address = "1231 Lago Vista Dr"
 city = "Beverly Hills"
+property-types = "Single Family"
 states = "California"
 status = "Active"
 title = "1231 Lago Vista Dr Beverly Hills, California 90210"
