@@ -15,6 +15,7 @@
         </div>
         <div class="columns is-multiline">
             {{ range .Pages }}
+            {{ if isset .Params "city" }}
             <div class="column is-3">
                 <a href="{{ .Permalink }}" class="listing-container">
                 {{ range first 1 .Params.photos.gallery }}
@@ -27,6 +28,7 @@
                 </div>
             </a>
             </div>
+            {{ end }}
             {{ end }}
         </div>
     </div>

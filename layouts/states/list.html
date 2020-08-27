@@ -15,7 +15,7 @@
         </div>
         <div class="columns is-multiline">
             {{ range .Pages }}
-            {{ if isset .Params "zip" }}
+            {{ if isset .Params "states" }}
             <div class="column is-3">
                 <a href="{{ .Permalink }}" class="listing-container">
                 {{ range first 1 .Params.photos.gallery }}
