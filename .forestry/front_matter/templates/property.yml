@@ -118,7 +118,7 @@ fields:
     max: 
     step: 
     required: true
-- name: type
+- name: property-types
   type: select
   default: []
   config:
